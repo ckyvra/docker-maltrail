@@ -1,0 +1,37 @@
+# TODO Add linter for docker-compose
+# TODO Dump to last version of docker
+version: '2.1'
+
+networks:
+  maltrail_local:
+
+# TODO : Add volumes directives
+
+services:
+  # Maltrail service
+  maltrail-sensor:
+    container_name: maltrail-sensor
+    restart: always
+    network_mode: "host"
+    # FIXME : Limit capabilities (promisc mode only required)
+    cap_add:
+     - NET_ADMIN
+     - SYS_NICE
+     - NET_RAW
+    image: "maltrail-sensor:0.1"
+    volumes:
+     - ./data/maltrail/log:/var/log/maltrail
+     - ./data/maltrail/trails:/root/.maltrail
+
+  # Maltrail service
+  maltrail-server:
+    container_name: maltrail-server
+    restart: always
+    networks:
+      - maltrail_local
+    image: "maltrail-server:0.1"
+    ports:
+      - "8338:8338"
+    volumes:
+      - ./data/maltrail/log:/var/log/maltrail
+      - ./data/maltrail/trails:/root/.maltrail
