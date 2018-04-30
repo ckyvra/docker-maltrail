@@ -1,6 +1,6 @@
 FROM maltrail-base:0.1
 
-LABEL maintainer="Christophe Kyvrakidis <chris@kyvrakidis.com>"
+LABEL maintainer="Christophe Kyvrakidis <christophe@kyvrakidis.com>"
 
 WORKDIR /opt/maltrail/
 

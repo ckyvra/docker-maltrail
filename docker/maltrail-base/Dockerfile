@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-LABEL maintainer="Christophe Kyvrakidis <chris@kyvrakidis.com>"
+LABEL maintainer="Christophe Kyvrakidis <christophe@kyvrakidis.com>"
 
 # Install packages and python dependencies
 # Install dev dependencies
