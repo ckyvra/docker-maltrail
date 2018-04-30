@@ -11,4 +11,5 @@ before_install:
   - make build
 
 script:
+  - echo test
   - make lint
