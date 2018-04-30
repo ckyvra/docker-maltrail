@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+
+branches:
+  only:
+    - travis
+
+before_install:
+  - make build
+
+script:
+  - make lint
