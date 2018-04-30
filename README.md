@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ckyvra/docker-maltrail.svg?branch=master)](https://travis-ci.org/ckyvra/docker-maltrail)
+
 # Docker for maltrail
 
 [Maltrail](https://github.com/stamparm/maltrail), Malicious traffic detection system, is composed of two python scripts,
