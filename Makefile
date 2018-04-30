@@ -19,7 +19,7 @@ compose:
 	docker-compose up
 
 lint:
-	for docker in $(docker_images); do hadolint docker/$$docker/Dockerfile; done
+	for docker in $(docker_images); do docker run --rm -i hadolint/hadolint < docker/maltrail-base/Dockerfile; done
 
 clean:
 	for docker in $(docker_images); do docker rmi -f $$docker:$(tag); done
