@@ -1,15 +1,15 @@
 sudo: required
 
+language: python
+
 services:
   - docker
 
 branches:
   only:
+    - master
     - travis
 
-before_install:
-  - make build
-
 script:
-  - echo test
+  - make build
   - make lint
