@@ -6,6 +6,7 @@ LABEL maintainer="Christophe Kyvrakidis <chris@kyvrakidis.com>"
 # Install dev dependencies
 # Download source code and install it
 # Cleanup directories
+# hadolint ignore=DL3018
 RUN apk -U upgrade && apk --no-cache add \
     bash \
     python \

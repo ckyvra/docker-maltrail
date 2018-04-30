@@ -1,3 +1,0 @@
-ignored:
-  # We only ignore apk pinning version
-  - DL3018
