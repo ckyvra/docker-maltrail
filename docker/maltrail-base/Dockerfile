@@ -23,4 +23,4 @@ RUN apk -U upgrade && apk --no-cache add \
  && apk del build-dependencies \
  && rm -fr /root/.cache
 
-# There is not CMD in this file because this image will be used by maltrail-sensor and maltrail-server as base image
+# There is no CMD in this file because this image will be used by maltrail-sensor and maltrail-server as base image
