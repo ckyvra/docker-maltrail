@@ -3,11 +3,17 @@ sudo: required
 services:
   - docker
 
+addons:
+  apt:
+    packages:
+    - shellcheck
+
 branches:
   only:
     - master
     - travis
 
 script:
-  - make build
   - make lint
+  - make build
+  - make test
