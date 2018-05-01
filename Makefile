@@ -6,7 +6,7 @@ all: lint build
 build: $(docker_images)
 
 maltrail-base:
-	docker build -t $@:0.1 docker/$@
+	docker build -t $@:$(tag) docker/$@
 
 maltrail-sensor: maltrail-base
 	docker build -t $@:$(tag) docker/$@
