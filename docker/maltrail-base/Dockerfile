@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.15
 
 LABEL maintainer="Christophe Kyvrakidis <christophe@kyvrakidis.com>"
 
